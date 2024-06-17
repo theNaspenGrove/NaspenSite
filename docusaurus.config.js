@@ -45,9 +45,11 @@ const config = {
           path: 'Content/Wiki',
         },
         blog: {
-          showReadingTime: false,
           routeBasePath: '/Blog',
           path: 'Content/Blog',
+          blogTitle: 'The Naspen Blog',
+          blogDescription: 'A place for Natalie to share her thoughts and ideas.',
+          showReadingTime: false,
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -72,6 +74,8 @@ const config = {
         path: 'Content/Community-Server/Blog',
         routeBasePath: '/Community-Server/Blog',
         showReadingTime: false,
+        blogTitle: 'The Naspen Grove Community Server Blog',
+        blogDescription: 'Updates, announcements, and more from the Naspen Grove Community Server.',
       },
     ],
   ],
@@ -79,6 +83,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -100,9 +109,20 @@ const config = {
             position: 'left'
           },
           {
+            type: 'dropdown',
             to: '/Community-Server', 
             label: 'Community Server', 
-            position: 'left'
+            position: 'right',
+            items:[
+              {
+                label: 'CS Wiki',
+                href: '/Community-Server/Wiki',
+              },
+              {
+                label: 'CS Blog',
+                href: '/Community-Server/Blog',
+              },
+            ]
           },
         
         ],
@@ -114,16 +134,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.naspen.mov',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'GitHub Org',
+                href: 'https://github.com/theNaspenGrove',
               },
             ],
           },
@@ -131,17 +147,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/Blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'GitHub Repo',
+                href: 'https://github.com/theNaspenGrove/NaspenSite',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} <code style="background-color:#ce7738; color:#1c1c1c; padding:2px 5px 2px 5px">The Naspen Grove</code> <br/> Built with Docusaurus and Love <span style="color:red">♥</span>`,
       },
       prism: {
         theme: prismThemes.github,
