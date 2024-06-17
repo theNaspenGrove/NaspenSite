@@ -6,6 +6,7 @@ import Highlight from '@site/src/components/Highlight';
 import Container from '../components/Layout/Container';
 import Row from '../components/Layout/Row';
 import Col from '../components/Layout/Col';
+import MessageOfTheMoment from '../components/MOTM/MOTM';
 
 export default {
   // Re-use the default mapping
@@ -16,4 +17,5 @@ export default {
   Container,
   Row,
   Col,
+  MessageOfTheMoment,
 };
