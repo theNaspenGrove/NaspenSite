@@ -94,7 +94,7 @@ const config = {
         title: 'Naspen',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/dark-logo-no-bg.svg',
         },
         items: [
           {

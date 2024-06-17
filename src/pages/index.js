@@ -12,8 +12,8 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+        <Heading as="h1" className="hero__title" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
+          <img src="/img/light-logo-no-bg.svg" style={{width: '1em'}}/>{siteConfig.title}
         </Heading>
         <p className="hero__subtitle"><MessageOfTheMoment/></p>
       </div>
