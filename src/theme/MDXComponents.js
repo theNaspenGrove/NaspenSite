@@ -7,6 +7,7 @@ import Container from '../components/Layout/Container';
 import Row from '../components/Layout/Row';
 import Col from '../components/Layout/Col';
 import MessageOfTheMoment from '../components/MOTM/MOTM';
+import Card from '../components/Card';
 
 export default {
   // Re-use the default mapping
@@ -18,4 +19,5 @@ export default {
   Row,
   Col,
   MessageOfTheMoment,
+  Card
 };
