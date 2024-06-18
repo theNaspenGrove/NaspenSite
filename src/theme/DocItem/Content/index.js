@@ -34,34 +34,49 @@ export default function DocItemContent({children}) {
   const {frontMatter} = useDoc();
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
-      {syntheticTitle && (
-        <header>
-          <Heading as="h1">{syntheticTitle} </Heading>
-        </header>
-      )}
 
       <MDXContent>
         <Container>
         <Row>
         <Col>
 
-        {frontMatter.github_link && (
-        <>
-        <Row>
-        <Col width="8">
-
-          <h1>{frontMatter.title}</h1>
-
-        </Col>
-        <Col width="4">
-
-          <Card iconPath="/icons/github-white.svg" title="GitHub Repo" href={frontMatter.github_link} description="" />
-
-        </Col>
-        </Row>
-        <hr />
-        </>
-
+        {syntheticTitle && (
+          <>
+            {frontMatter.project_links ? (
+              <>
+                <header>
+                  <Heading as="h1">{frontMatter.title} </Heading>
+                </header>
+                <Row>
+                  <Col width="3">
+                    {frontMatter.github_link && (
+                        <Card
+                        iconPath="/icons/github-white.svg"
+                        title="GitHub Repo"
+                        href={frontMatter.github_link}
+                        description=""
+                      />
+                    )}
+                  </Col>
+                  <Col width="3">
+                    {frontMatter.modrinth_link && (
+                        <Card
+                        iconPath="/icons/modrinth.svg"
+                        title="Modrinth Page"
+                        href={frontMatter.modrinth_link}
+                        description=""
+                      />
+                    )}
+                  </Col>
+                </Row>
+                <hr />
+              </>
+            ) : (
+              <header>
+                <Heading as="h1">{syntheticTitle} </Heading>
+              </header>
+            )}
+          </>
         )}
 
         {children}
