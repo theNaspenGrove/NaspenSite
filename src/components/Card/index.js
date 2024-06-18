@@ -4,8 +4,6 @@ import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
-
-
 function CardContainer({href, children}) {
   return (
     <Link
@@ -23,7 +21,9 @@ function CardA({iconPath, title, href, description}) {
         as="h2"
         className={styles.cardTitle}
         title={title}>
-        <img className={styles.cardIcon} src={iconPath} alt={title}/> {title}
+        {iconPath && (
+          <img className={styles.cardIcon} src={iconPath} alt={title}/>
+        )} {title}
       </Heading>
       {description && (
         <sub

@@ -8,6 +8,7 @@ import Row from '../components/Layout/Row';
 import Col from '../components/Layout/Col';
 import MessageOfTheMoment from '../components/MOTM/MOTM';
 import Card from '../components/Card';
+import CraftingGrid from '../components/CraftingGrid/CraftingGrid';
 
 export default {
   // Re-use the default mapping
@@ -19,5 +20,6 @@ export default {
   Row,
   Col,
   MessageOfTheMoment,
-  Card
+  Card,
+  CraftingGrid
 };

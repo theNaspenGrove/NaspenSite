@@ -1,0 +1,171 @@
+---
+title: Crafting Recipes
+---
+
+<details>
+<summary>Coral Blocks</summary>
+<div>
+
+<Row>
+<Col width="6">
+
+Coral blocks can be crafted by making a 3x3 grid out of it’s associated plant item. 
+
+</Col>
+<Col width="6">
+
+<CraftingGrid items={[
+    'brain-coral', 'brain-coral', 'brain-coral', 
+    'brain-coral', 'brain-coral', 'brain-coral', 
+    'brain-coral', 'brain-coral', 'brain-coral']} 
+    result={'Brain_Coral_Block'} />
+
+</Col>
+</Row>
+
+</div>
+</details>
+
+<details>
+<summary>Blackstone</summary>
+<div>
+
+Blackstone can be crafted using 2 basalt and 2 charcoal/coal. 
+
+Polished Blackstone can be crafted using 2 polished basalt and 2 charcoal/coal.
+
+<Row>
+<Col width="6">
+
+<CraftingGrid items={[
+    'Coal', 'Polished_Basalt', null, 
+    'Polished_Basalt', 'Coal', null, 
+    null, null, null]} 
+    result={'Polished_Blackstone'} />
+
+
+</Col>
+<Col width="6">
+
+<CraftingGrid items={[
+    'Coal', 'Basalt', null, 
+    'Basalt', 'Coal', null, 
+    null, null, null]} 
+    result={'Blackstone'} />
+
+</Col>
+</Row>
+
+</div>
+</details>
+
+<details>
+<summary>Dispenser</summary>
+<div>
+
+<Row>
+<Col width="6">
+
+Dispensers can be crafted using a bow in the center of a dropper recipe. 
+
+</Col>
+<Col width="6">
+
+<CraftingGrid items={[
+    'Cobblestone', 'Cobblestone', 'Cobblestone', 
+    'Cobblestone', 'Bow', 'Cobblestone', 
+    'Cobblestone', 'Redstone', 'Cobblestone']} 
+    result={'Dispenser'} />
+
+</Col>
+</Row>
+
+</div>
+</details>
+
+<details>
+<summary>Wool → String</summary>
+<div>
+
+<Row>
+<Col width="6">
+
+Wool can be crafted back into string by placing it into a crafting grid by itself. 
+
+</Col>
+<Col width="6">
+
+<CraftingGrid items={[
+    null, null, null, 
+    null, 'White_Wool', null, 
+    null, null, null]} 
+    result={'String'} />
+
+</Col>
+</Row>
+
+</div>
+</details>
+
+<details>
+<summary>Ice, Packed Ice, and Blue Ice</summary>
+<div>
+
+Ice, Packed Ice, and Blue Ice, can be converted between each other at a ratio of 9. 
+
+**81x Ice → 9x Packed Ice → 1x Blue Ice**
+
+</div>
+</details>
+
+<details>
+<summary>Black Dye</summary>
+<div>
+
+<Row>
+<Col width="6">
+
+Black Dye can be crafted directly from Charcoal or Coal in a crafting grid. 
+
+</Col>
+<Col width="6">
+
+<CraftingGrid items={[
+    null, null, null, 
+    null, 'Coal', null, 
+    null, null, null]} 
+    result={'Black_Dye'} />
+
+</Col>
+</Row>
+
+</div>
+</details>
+
+<details>
+<summary>Bread</summary>
+<div>
+
+A shapeless recipe has been added to bread so that it can be crafted in the player inventory. 
+
+</div>
+</details>
+
+<details>
+<summary>Paper</summary>
+<div>
+
+A shapeless recipe has been added to paper so that it can be crafted in the player inventory. 
+
+</div>
+</details>
+
+<details>
+<summary>Shulker Boxes</summary>
+<div>
+
+ - A shapeless recipe has been added to Shulker Boxes so that it can be crafted in the player inventory. 
+ - Shulker boxes can be crafted back into two shulker shells, destroying the chest used to craft them. 
+
+</div>
+</details>
