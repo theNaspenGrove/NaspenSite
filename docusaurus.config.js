@@ -11,6 +11,7 @@ const config = {
   title: 'Naspen',
   tagline: 'Forever in progress.',
   favicon: 'img/favicon.ico',
+  trailingSlash: true,
 
   // Set the production url of your site here
   url: 'https://naspen.mov',
