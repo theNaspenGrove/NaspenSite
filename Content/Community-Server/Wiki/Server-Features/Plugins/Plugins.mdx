@@ -1,0 +1,72 @@
+---
+title: Installed Plugins
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import {Free, Premium, Custom} from './Type'
+
+import ProxyPlugins from './_ProxyPlugins.mdx'
+import SurvivalPlugins from './_SurvivalPlugins.mdx'
+import CreativePlugins from './_CreativePlugins.mdx'
+
+<Tabs queryString="server">
+<TabItem value="proxy" label="Proxy">
+
+<table>
+
+<tr>
+<th colspan="3">Velocity</th>
+</tr>
+
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Version</th>
+</tr>
+
+<ProxyPlugins/>
+
+</table>
+
+</TabItem>
+<TabItem value="survival" label="Survival" default>
+
+<table>
+
+<tr>
+<th colspan="3">Paper</th>
+</tr>
+
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Version</th>
+</tr>
+
+<SurvivalPlugins/>
+
+</table>
+
+</TabItem>
+<TabItem value="creative" label="Creative">
+
+<table>
+
+<tr>
+<th colspan="3">Paper</th>
+</tr>
+
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Version</th>
+</tr>
+
+<CreativePlugins/>
+
+</table>
+
+</TabItem>
+</Tabs>
