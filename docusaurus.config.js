@@ -61,7 +61,7 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'Community-Server',
+        id: 'Community-Server-Wiki',
         path: 'Content/Community-Server/Wiki',
         routeBasePath: '/Community-Server/Wiki',
         sidebarPath: './CommunityServerSidebar.js',
@@ -70,7 +70,7 @@ const config = {
     [
       '@docusaurus/plugin-content-blog',
       {
-        id: 'Community-Server',
+        id: 'Community-Server-Blog',
         path: 'Content/Community-Server/Blog',
         routeBasePath: '/Community-Server/Blog',
         showReadingTime: false,
