@@ -109,6 +109,11 @@ const config = {
             position: 'left'
           },
           {
+            to: '/Community-Rules', 
+            label: 'Community Rules', 
+            position: 'left'
+          },
+          {
             type: 'dropdown',
             to: '/Community-Server', 
             label: 'Community Server', 
