@@ -7,6 +7,12 @@ import styles from './index.module.css';
 
 import MessageOfTheMoment from '../components/MOTM/MOTM';
 
+import HomeContent from './HomeContent.mdx';
+
+import Container from '../components/Layout/Container';
+import Row from '../components/Layout/Row';
+import Col from '../components/Layout/Col';
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -26,6 +32,13 @@ export default function Home() {
   return (
     <Layout>
       <HomepageHeader />
+      <Container>
+        <Row>
+          <Col>
+            <HomeContent />
+          </Col>
+        </Row>
+      </Container>
     </Layout>
   );
 }
