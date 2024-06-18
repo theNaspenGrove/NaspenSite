@@ -8,23 +8,25 @@ function CardContainer({href, children}) {
   return (
     <Link
       href={href}
-      className={clsx('card padding--md', styles.cardContainer)}>
+      className={clsx('card padding--md margin-bottom--md', styles.cardContainer)}>
       {children}
     </Link>
   );
 }
 
-function CardA({iconPath, title, href, description}) {
+function CardA({iconPath, title, center, href, description}) {
   return (
-    <CardContainer href={href}>
-      <Heading
-        as="h2"
-        className={styles.cardTitle}
-        title={title}>
-        {iconPath && (
-          <img className={styles.cardIcon} src={iconPath} alt={title}/>
-        )} {title}
-      </Heading>
+    <CardContainer  href={href}>
+      <div style={{ textAlign: center ? 'center' : '' }}>
+        <Heading
+          as="h2"
+          className={styles.cardTitle}
+          title={title}>
+          {iconPath && (
+            <img className={styles.cardIcon} src={iconPath} alt={title}/>
+          )} {title}
+        </Heading>
+      </div>
       {description && (
         <sub
           className={styles.cardDescription}
@@ -35,6 +37,6 @@ function CardA({iconPath, title, href, description}) {
     </CardContainer>
   );
 }
-export default function Card({iconPath, title, href, description}) {
-  return <CardA iconPath={iconPath} title={title} href={href} description={description} />;
+export default function Card({iconPath, title, center, href, description}) {
+  return <CardA iconPath={iconPath} title={title} center={center} href={href} description={description} />;
 }
