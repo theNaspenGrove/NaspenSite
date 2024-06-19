@@ -49,7 +49,7 @@ function NavbarContentLayout({left, right}) {
       <div className="navbar__items">{left}</div>
       {!isHomePage && (
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1, position: 'absolute',  left: 0, right: 0, bottom: 10, zIndex: -1}}>
-          <div style={{width: '100%', flex: 'none'}}><MessageOfTheMoment/></div>
+          <div style={{width: '100%', flex: 'none', textAlign: 'center'}}><MessageOfTheMoment/></div>
         </div>
       )}
       <div className="navbar__items navbar__items--right">{right}</div>
