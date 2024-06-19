@@ -13,6 +13,8 @@ import Container from '../components/Layout/Container';
 import Row from '../components/Layout/Row';
 import Col from '../components/Layout/Col';
 
+import MDXContent from '@theme/MDXContent';
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -32,13 +34,23 @@ export default function Home() {
   return (
     <Layout>
       <HomepageHeader />
-      <Container>
-        <Row>
-          <Col>
-            <HomeContent />
-          </Col>
-        </Row>
-      </Container>
+      <MDXContent>
+        <Container>
+          <Row>
+            <Col>
+            
+              <HomeContent />
+
+              :::note[water]
+
+              This is a note
+
+              :::
+
+            </Col>
+          </Row>
+        </Container>
+      </MDXContent>
     </Layout>
   );
 }
