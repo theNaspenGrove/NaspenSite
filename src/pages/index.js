@@ -41,12 +41,6 @@ export default function Home() {
             
               <HomeContent />
 
-              :::note[water]
-
-              This is a note
-
-              :::
-
             </Col>
           </Row>
         </Container>
