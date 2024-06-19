@@ -19,14 +19,21 @@ var quirks = [
 	'Thinker', 
 	'Confused', 
 	'Helper',
-	'Trans' 
+	'Trans', 
+	'lost',
+	'Queer',
+	'Idiot'
 ];
 
 var phrases = [
 	'Forever in progress.',
 	'Always learning.',
 	'Somewhat broken.', 
-	'Processes are my *jam*.'
+	'Processes are my *jam*.',
+	'Where you can be you.',
+	'Where am I??',
+	'Caffeine please...',
+
 ]
 
 function SelectMessageOfTheMoment() {
