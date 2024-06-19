@@ -64,11 +64,15 @@ function SelectThreeUniqueQuirks() {
     let shuffledQuirks = [...quirks];
     shuffleArray(shuffledQuirks);
     
-    // Select the first three unique entries
-    const selectedQuirks = shuffledQuirks.slice(0, 3);
+    // Select the first four unique entries
+    const selectedQuirks = shuffledQuirks.slice(0, 4);
     
     return (
-        <span>{selectedQuirks[0]} | {selectedQuirks[1]} | {selectedQuirks[2]}</span>
+		<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+			<div style={{ flex: 1, textAlign: 'right', paddingRight: '10px' }}>{selectedQuirks[0]} | {selectedQuirks[1]}</div>
+			<span style={{ flexShrink: 0 }}>|</span>
+			<div style={{ flex: 1, textAlign: 'left', paddingLeft: '10px' }}>{selectedQuirks[2]} | {selectedQuirks[3]}</div>
+		</div>
     );
 }
 
