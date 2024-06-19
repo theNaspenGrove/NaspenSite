@@ -200,8 +200,9 @@ const data: Record<string, PluginValues> = {
         true
     ],
     ShockingClusters: [
-        "#", 
+        "", 
         "Shocking Clusters",
+        ""
     ],
     SlashServer: [
         "https://modrinth.com/plugin/slashserver", 
@@ -273,7 +274,7 @@ const createLinkElement = (key: string) => {
     const naspenBuilt = data[key]?.length > 3 ? data[key][3] : false;
 
     // Check if all values are found
-    if (!url || !title ) {
+    if (!title ) {
         return <p>Key not found in one or more lists.</p>;
     }
 
@@ -281,9 +282,9 @@ const createLinkElement = (key: string) => {
     return (
         <>
         {getPlatformElement(platform)}
-        <a href={url} title={title}>
+        {url ? (<a href={url} title={title}>
         {title}
-        </a>
+        </a>) : <span>{title}</span>}
         {
         naspenBuilt ? (<code style={{backgroundColor: '#e4e319', color: '#1c1c1c', fontWeight: 'bold'}} className='margin-left--sm padding-horiz--xs'>Published</code>) : null
         }
@@ -313,11 +314,17 @@ const getPlatformElement = (platform) => {
             return (
                 <img src={iconSrc} alt={platform} style={iconStyle} />
             );
+        case '':
+            platform = 'Not Hosted';
+            return (
+                <svg style={{...iconStyle, color: 'red'}} viewBox="6 6 19 19" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5  c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4  C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z"/>
+                </svg>
+            )
         case undefined:
             platform = 'Unknown Platform';
             return (
-                <svg style={{...iconStyle, color: 'red'}} height="800px" width="800px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
-                viewBox="0 0 512 512"  xmlSpace="preserve">
+                <svg style={{...iconStyle, color: 'red'}} viewBox="0 0 511 511" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xmlSpace="preserve">
            <g>
                <path fill="currentColor" d="M396.138,85.295c-13.172-25.037-33.795-45.898-59.342-61.03C311.26,9.2,280.435,0.001,246.98,0.001
                    c-41.238-0.102-75.5,10.642-101.359,25.521c-25.962,14.826-37.156,32.088-37.156,32.088c-4.363,3.786-6.824,9.294-6.721,15.056
