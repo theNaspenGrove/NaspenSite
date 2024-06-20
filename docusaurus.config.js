@@ -43,14 +43,18 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           routeBasePath: '/Wiki',
+          tagsBasePath: '/Tags',
           path: 'Content/Wiki',
         },
         blog: {
           routeBasePath: '/Blog',
+          tagsBasePath: '/Tags',
           path: 'Content/Blog',
           blogTitle: 'The Naspen Blog',
           blogDescription: 'A place for Natalie to share her thoughts and ideas.',
           showReadingTime: false,
+          tags: 'tags.yml',
+          onInlineTags: 'throw' 
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -65,6 +69,7 @@ const config = {
         id: 'Community-Server-Wiki',
         path: 'Content/Community-Server/Wiki',
         routeBasePath: '/Community-Server/Wiki',
+        tagsBasePath: '/Tags',
         sidebarPath: './CommunityServerSidebar.js',
       },
     ],
@@ -74,6 +79,7 @@ const config = {
         id: 'Community-Server-Blog',
         path: 'Content/Community-Server/Blog',
         routeBasePath: '/Community-Server/Blog',
+        tagsBasePath: '/Tags',
         showReadingTime: false,
         blogTitle: 'The Naspen Grove Community Server Blog',
         blogDescription: 'Updates, announcements, and more from the Naspen Grove Community Server.',
@@ -90,7 +96,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'https://data.naspen.mov/motm-img/format=webp',
       navbar: {
         title: 'Naspen',
         logo: {

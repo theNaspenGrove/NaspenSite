@@ -32,7 +32,7 @@ function HomepageHeader() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout>
+    <Layout description="The digital home for the one and only Naspen." >
       <HomepageHeader />
       <MDXContent>
         <Container>

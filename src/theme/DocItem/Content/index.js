@@ -9,6 +9,7 @@ import Card from '../../../components/Card';
 import Container from '../../../components/Layout/Container';
 import Row from '../../../components/Layout/Row';
 import Col from '../../../components/Layout/Col';
+import TagsListInline from '@theme/TagsListInline';
 
 /**
  Title can be declared inside md content or declared through
@@ -32,6 +33,11 @@ function useSyntheticTitle() {
 export default function DocItemContent({children}) {
   const syntheticTitle = useSyntheticTitle();
   const {frontMatter} = useDoc();
+
+  const {metadata} = useDoc();
+  const {tags} = metadata;
+  const canDisplayTagsRow = tags.length > 0;
+
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
 
@@ -69,12 +75,22 @@ export default function DocItemContent({children}) {
                     )}
                   </Col>
                 </Row>
+                {canDisplayTagsRow && (
+                  <TagsListInline tags={tags} />
+                )}
                 <hr />
               </>
             ) : (
-              <header>
-                <Heading as="h1">{syntheticTitle} </Heading>
-              </header>
+              <>
+                <header>
+                  <Heading as="h1">{syntheticTitle} </Heading>
+                </header>
+                {canDisplayTagsRow && (
+                  <TagsListInline tags={tags} />
+                )}
+                <hr/>
+              </>
+
             )}
           </>
         )}

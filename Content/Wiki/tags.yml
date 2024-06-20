@@ -1,0 +1,8 @@
+Plugin: 
+  label: "Plugin"
+  permalink: "Plugin"
+  description: "Articles relating to, about, or documenting a Minecraft Paper/Spigot Plugin."
+Released: 
+  label: "Released"
+  permalink: "Released"
+  description: "Minecraft Plugins or other general projects that I've released for public use and download."

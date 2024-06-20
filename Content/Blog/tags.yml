@@ -1,0 +1,33 @@
+TheMandates: 
+  label: "The Mandates"
+  permalink: "/TheMandates"
+  description: "A world I've been story-crafting with my brother since I was like, 13."
+Abstract: 
+  label: "Abstract"
+  permalink: "/Abstract"
+  description: "A catch all tag for random ramblings of mine. Often consisting of poetry and internal commentary."
+MindStyle: 
+  label: "Mind-Style"
+  permalink: "/MindStyle"
+  description: "Things relating to my experience of mind."
+TheWorldScreams: 
+  label: "The World Screams"
+  permalink: "/TheWorldScreams"
+  description: "A broad collection of media that discusses my experience with sensory overload, ADHD, Autism, and a disorienting uncontrolled internal dialogue."
+Minecraft:
+  label: "Minecraft"
+  permalink: "/Minecraft"
+  description: "It's Minecraft, what else do you want from me?"
+WithMyVoice:
+  label: "With My Voice"
+  permalink: "WithMyVoice"
+  description: 'This is a partner to the "The World Screams" tag where I grapple with the actual problems caused by the issues I rant out there.'
+Info:
+  label: "Info"
+  permalink: "/Info"
+  description: "General information about myself, but in a blog style format."
+MandatesHandbook:
+  label: "The Mandates Handbook"
+  permalink: "/MandatesHandbook"
+  description: 'An optimistic "start" to the Mandates story.'
+  

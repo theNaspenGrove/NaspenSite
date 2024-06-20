@@ -38,7 +38,7 @@ function HRToffset({date, formattedDate}) {
   const differenceInTime = comparisonDate - new Date(date);
 
   const differenceInDays = differenceInTime / (1000 * 3600 * 24);
-  return <time dateTime={date}><strong>{differenceInDays * -1}</strong></time>;
+  return <time dateTime={date}><strong>{Math.round(differenceInDays * -1)}</strong></time>;
 
 }
 function Spacer() {
