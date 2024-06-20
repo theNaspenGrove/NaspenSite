@@ -48,8 +48,8 @@ const getTimeSinceCommit = () => {
         <span>{error}</span>
       ) : (
         <>
-          <span>{commit.committerName}: <code>{commit.message}</code> {getTimeSinceCommit()}</span><br/>
-          <span><code><a href={commit.url}>{commit.sha.slice(0, 7)}</a></code></span><br/>
+          <span><code><a href={commit.url}>{commit.sha.slice(0, 7)}</a></code> | {commit.committerName} | <span title={new Date(commit.committerDate).toTimeString() }>{getTimeSinceCommit()} </span></span><br/>
+          <code>{commit.message}</code><br/>
         </>
       )}
     </>
