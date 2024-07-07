@@ -22,7 +22,8 @@ var quirks = [
 	'Trans', 
 	'lost',
 	'Queer',
-	'Idiot'
+	'Idiot',
+	'Extant'
 ];
 
 var phrases = [
