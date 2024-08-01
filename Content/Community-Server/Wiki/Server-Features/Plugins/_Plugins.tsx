@@ -92,14 +92,14 @@ const data: Record<string, PluginValues> = {
         "LuckPerms"
     ],
     MinecraftAuth: [
-        "https://modrinth.com/plugin/minecraftauthenticationroles", 
+        "https://github.com/MinecraftAuthentication/plugin/releases", 
         "MinecraftAuth",
         "Modrinth"
     ],
     MinecraftAuthRoles: [
         "https://github.com/theNaspenGrove/MinecraftAuthenticationRoles", 
         "MinecraftAuthRoles",
-        "GitHub",
+        "Modrinth",
         true
     ],
     MiniPlaceholders: [
@@ -135,6 +135,11 @@ const data: Record<string, PluginValues> = {
     NoPlayerKillPlz: [
         "https://github.com/theNaspenGrove/NoPlayerKillPlz", 
         "No Player Kill Plz",
+        "GitHub"
+    ],
+    PacketEvents: [
+        "https://github.com/retrooper/packetevents", 
+        "PacketEvents",
         "GitHub"
     ],
     PAPIProxyBridge: [
