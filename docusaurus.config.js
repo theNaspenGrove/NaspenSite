@@ -121,22 +121,20 @@ const config = {
             position: 'left'
           },
           {
-            type: 'dropdown',
             to: '/Community-Server', 
             label: 'Community Server', 
-            position: 'right',
-            items:[
-              {
-                label: 'CS Wiki',
-                href: '/Community-Server/Wiki',
-              },
-              {
-                label: 'CS Blog',
-                href: '/Community-Server/Blog',
-              },
-            ]
+            position: 'right'
           },
-        
+          {
+            to: '/Community-Server/Wiki', 
+            label: 'CS Wiki', 
+            position: 'right'
+          },
+          {
+            to: '/Community-Server/Blog', 
+            label: 'CS Blog', 
+            position: 'right'
+          },
         ],
       },
       footer: {
