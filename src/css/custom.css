@@ -27,3 +27,10 @@ html{
 .footer {
   border-top: 1px solid var(--ifm-toc-border-color);
 }
+#__blog-post-container p {
+  text-indent: 4ch each-line;
+}
+
+#__blog-post-container blockquote p {
+  text-indent: 0ch;
+}
