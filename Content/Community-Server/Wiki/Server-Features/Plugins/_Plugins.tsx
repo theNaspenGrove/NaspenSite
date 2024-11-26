@@ -4,7 +4,11 @@ import React from 'react';
 type PluginValues = [string, string, platform?: string, publishedByNaspen?: boolean];
 
 const data: Record<string, PluginValues> = {
-    AdvancedPortals: [
+    AdvancedServerList: [
+        "https://modrinth.com/plugin/advancedserverlist", 
+        "Advanced Server List",
+        "Modrinth"
+    ],AdvancedPortals: [
         "https://www.spigotmc.org/resources/advanced-portals.14356/", 
         "Advanced Portals",
         "Spigot"
@@ -208,6 +212,11 @@ const data: Record<string, PluginValues> = {
         "", 
         "Shocking Clusters",
         ""
+    ],
+    SimpleVoiceChat: [
+        "https://modrinth.com/plugin/simple-voice-chat/", 
+        "Shocking Clusters",
+        "Modrinth"
     ],
     SlashServer: [
         "https://modrinth.com/plugin/slashserver", 
