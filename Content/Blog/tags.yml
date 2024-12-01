@@ -30,4 +30,8 @@ MandatesHandbook:
   label: "The Mandates Handbook"
   permalink: "/MandatesHandbook"
   description: 'An optimistic "start" to the Mandates story.'
+NasPanoptiCam: 
+  label: "NasPanoptiCam"
+  permalink: "/NasPanoptiCam"
+  description: "Nas is the best... cam??"
   
