@@ -34,16 +34,17 @@ var phrases = [
 	'Where you can be you.',
 	'Where am I??',
 	'Caffeine please...',
+	'By day I erase Confusion, by night I sow it.',
 
 ]
 
 function SelectMessageOfTheMoment() {
-	// Select either a random phrase or a 3 unique quirks
+	// Select either a random phrase or a 4 unique quirks
 	const random = Math.random();
 	if (random < 0.5) {
 		return SelectRandomPhrase();
 	} else {
-		return SelectThreeUniqueQuirks();
+		return SelectFourUniqueQuirks();
 	}
 }
 
@@ -67,7 +68,7 @@ function shuffleArray(array) {
     }
 }
 
-function SelectThreeUniqueQuirks() {
+function SelectFourUniqueQuirks() {
     // Clone the messages array to avoid modifying the original array
     let shuffledQuirks = [...quirks];
     shuffleArray(shuffledQuirks);
