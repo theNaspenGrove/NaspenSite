@@ -169,7 +169,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} <code style="background-color:#ce7738; color:#1c1c1c; padding:2px 5px 2px 5px">The Naspen Grove</code> <br/> Built with Docusaurus and Love <span style="color:red">♥</span>`,
+        copyright: `Copyright © ${new Date().getFullYear()} <code style="background-color:#ce7738; color:#1c1c1c; padding:2px 5px 2px 5px">The Naspen Grove</code> <br/> Built with <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a> and Love <span style="color:red">♥</span>`,
       },
       prism: {
         theme: prismThemes.github,
