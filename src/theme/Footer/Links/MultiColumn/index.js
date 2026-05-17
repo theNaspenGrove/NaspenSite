@@ -4,7 +4,7 @@ import LinkItem from '@theme/Footer/LinkItem';
 import { useState, useEffect } from 'react';
 
 const LatestGitHubCommit = () => {
-const [commit, setCommit] = useState({ committerName: '', committerDate: '', message: '', url: '', commit: '', sha: ''});
+const [commit, setCommit] = useState({ authorName: '', committerDate: '', message: '', url: '', commit: '', sha: '', authorURL: '' });
 const [error, setError] = useState('');
 
 useEffect(() => {
@@ -16,8 +16,8 @@ useEffect(() => {
     return res.json();
   })
   .then(data => {
-    const { commit: {committer: { name: committerName }}, commit: {committer: {date: committerDate }}, html_url, commit: { message }, sha } = data[0];
-    setCommit({ committerName, committerDate, url: html_url, message, sha});
+    const { commit: {author: { name: authorName }}, commit: {committer: {date: committerDate }}, html_url, commit: { message }, sha, author: { html_url: authorURL } } = data[0];
+    setCommit({ committerName: authorName, committerDate, url: html_url, message, sha, authorURL});
   })
   .catch(error => {
     console.error('Error fetching commit data:', error);
@@ -48,8 +48,10 @@ const getTimeSinceCommit = () => {
         <span>{error}</span>
       ) : (
         <>
-          <span><code><a href={commit.url}>{commit.sha.slice(0, 7)}</a></code> | {commit.committerName} | <span title={new Date(commit.committerDate).toTimeString() }>{getTimeSinceCommit()} </span></span><br/>
-          <code>{commit.message}</code><br/>
+          <span><code>{commit.message}</code></span><br/>
+          <span><a href={commit.authorURL} target='_blank' rel='noopener noreferrer'>{commit.committerName}</a></span>, <span>{getTimeSinceCommit()}</span><br/>
+          <span><code><a href={commit.url} target='_blank' rel='noopener noreferrer'>{commit.sha.slice(0, 7)}</a></code></span><br/>
+          
         </>
       )}
     </>
