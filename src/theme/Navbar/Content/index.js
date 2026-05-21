@@ -14,6 +14,7 @@ import styles from './styles.module.css';
 
 import { useLocation } from 'react-router-dom';
 import MessageOfTheMoment from '../../../components/MOTM/MOTM';
+import ExpandDetailsButton from '../../../components/ExpandDetailsButton';
 
 function useNavbarItems() {
   // TODO temporary casting until ThemeConfig type is improved
@@ -76,6 +77,7 @@ export default function NavbarContent() {
         // Ask the user to add the respective navbar items => more flexible
         <>
           <NavbarItems items={rightItems} />
+          <ExpandDetailsButton />
           <NavbarColorModeToggle className={styles.colorModeToggle} />
           {!searchBarItem && (
             <NavbarSearch>

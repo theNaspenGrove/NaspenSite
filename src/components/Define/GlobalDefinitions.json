@@ -1,0 +1,10 @@
+{
+    "Definitions": {
+		"OS": {
+			"definition": "An Operating System (OS) is the software that manages the hardware and software of a computer or server. It provides a way for applications to interact with the hardware and for users to interact with the system."
+		},
+		"2FA": {
+			"definition": "2FA, or 2 Factor Authentication, is a method of securing an online account by requiring another confirmation step before logging into the account."
+		}
+    }
+}

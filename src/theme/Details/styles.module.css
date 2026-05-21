@@ -1,0 +1,164 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/*
+CSS variables, meant to be overridden by final theme
+ */
+
+ol{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-left: var(--highlight-color) .25em solid;
+	padding-left: calc(var(--ifm-list-left-padding) + .5em);
+	border: 4px solid transparent;
+	border-image: linear-gradient(to right, var(--ifm-color-primary-darkest) 0%,rgba(0, 0, 0, 0) 5%) 1;
+}
+
+.details {
+--docusaurus-details-summary-arrow-size: 0.38rem;
+--docusaurus-details-transition: transform 200ms ease;
+--docusaurus-details-decoration-color: grey;
+--docusaurus-details-decoration-color: var(--ifm-alert-border-color);
+--docusaurus-details-transition: transform var(--ifm-transition-fast) ease;
+margin: 0 0 var(--ifm-spacing-vertical);
+border: 1px solid var(--ifm-alert-border-color);
+scroll-margin-top: var(--ifm-navbar-height);
+}
+
+.details > summary {
+position: relative;
+cursor: pointer;
+list-style: none;
+padding-left: 1rem;
+}
+
+
+.details > summary > code {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.details > summary > h1,
+.details > summary > h2,
+.details > summary > h3,
+.details > summary > h4,
+.details > summary > h5,
+.details > summary > h6 {
+    margin-bottom: 0;
+}
+
+/* TODO: deprecation, need to remove this after Safari will support `::marker` */
+.details > summary::-webkit-details-marker {
+display: none;
+}
+
+.details > summary::before {
+position: absolute;
+top: 0.45rem;
+left: 0;
+
+/* CSS-only Arrow */
+content: '';
+border-width: var(--docusaurus-details-summary-arrow-size);
+border-style: solid;
+border-color: transparent transparent transparent
+	var(--ifm-color-primary);
+
+/* Arrow rotation anim */
+transform: rotate(0deg);
+transition: var(--docusaurus-details-transition);
+transform-origin: calc(var(--docusaurus-details-summary-arrow-size) / 2) 50%;
+}
+
+/* When JS disabled/failed to load: we use the open property for arrow animation: */
+.details[open]:not(.isBrowser) > summary::before,
+/* When JS works: we use the data-attribute for arrow animation */
+.details[data-collapsed='false'].isBrowser > summary::before {
+transform: rotate(90deg);
+}
+
+.emptyDetails > summary {
+	padding-left: 0;
+	list-style: none;
+}
+
+.emptyDetails > summary::-webkit-details-marker,
+.emptyDetails > summary::-moz-list-bullet,
+.emptyDetails > summary::marker {
+	display: none;
+	content: none;
+}
+
+.collapsibleContent {
+margin-top: 1rem;
+border-top: 1px solid var(--docusaurus-details-decoration-color);
+padding-top: 1rem;
+}
+
+.collapsibleContent p:last-child {
+margin-bottom: 0;
+}
+
+.details > summary > p:last-child {
+margin-bottom: 0;
+}
+
+li .details, span .details{
+	--docusaurus-details-summary-arrow-size: 0.38rem;
+	--docusaurus-details-transition: transform 200ms ease;
+	--docusaurus-details-decoration-color: var(--ifm-color-primary-darkest);
+	--docusaurus-details-transition: transform var(--ifm-transition-fast) ease;
+	margin: 0;
+	border: 0;
+	scroll-margin-top: var(--ifm-navbar-height);
+	padding: 0;
+	--ifm-alert-background-color: none;
+}
+
+li .details div .collapsibleContent, span .details div .collapsibleContent{
+    position: relative;
+	background-color: none; 
+	border-top: none;
+	margin-top: 0rem;
+	padding-top: 0rem;
+}
+
+li .details[open] > div{
+	z-index: 4;
+	margin-left: 0.5rem;
+	border-left: var(--ifm-blockquote-border-left-width) solid color-mix(in srgb, var(--docusaurus-details-decoration-color) 60%, transparent);
+	box-shadow: var(--ifm-blockquote-shadow);
+	color: var(--ifm-blockquote-color);
+	font-size: var(--ifm-blockquote-font-size);
+	padding: var(--ifm-blockquote-padding-vertical) var(--ifm-blockquote-padding-horizontal);
+}
+
+
+li .details > summary::before{
+	margin-left: -30px; 
+}
+
+li:nth-child(n+10) .details > summary::before{
+	margin-left: -2rem; 
+}
+
+li:nth-child(n+100) .details > summary::before{
+	margin-left: -3rem; 
+}
+
+span .details > summary::before{
+	margin-left: -1rem; 
+	padding-left: 1rem;
+}
+
+li .details > summary, span .details > summary {
+	padding-left: 0rem;
+	display: block;
+}
+
+li .details[open] > summary, span .details[open] > summary {
+	padding-bottom: -0.1rem;
+	border-bottom: var(--ifm-blockquote-border-left-width) solid color-mix(in srgb, var(--docusaurus-details-decoration-color) 60%, transparent);
+}

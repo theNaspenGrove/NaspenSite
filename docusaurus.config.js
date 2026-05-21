@@ -98,8 +98,8 @@ const config = {
     ({
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: true,
-        respectPrefersColorScheme: false,
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
       },
       // Replace with your project's social card
       image: 'https://data.naspen.mov/motm-img/format=webp',

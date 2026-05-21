@@ -9,6 +9,7 @@ import Col from '../components/Layout/Col';
 import MessageOfTheMoment from '../components/MOTM/MOTM';
 import Card from '../components/Card';
 import CraftingGrid from '../components/CraftingGrid/CraftingGrid';
+import Define, {Definitions} from '../components/Define/Define';
 
 export default {
   // Re-use the default mapping
@@ -21,5 +22,6 @@ export default {
   Col,
   MessageOfTheMoment,
   Card,
-  CraftingGrid
+  CraftingGrid,
+  Define
 };
