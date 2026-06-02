@@ -80,6 +80,16 @@ const config = {
       },
     ],
     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'Medical-Wiki',
+        path: 'Content/Medical/Wiki',
+        routeBasePath: '/Medical/Wiki',
+        tagsBasePath: '/Tags',
+        sidebarPath: './MedicalSidebar.js',
+      },
+    ],
+    [
       '@docusaurus/plugin-content-blog',
       {
         id: 'Community-Server-Blog',
@@ -89,6 +99,18 @@ const config = {
         showReadingTime: false,
         blogTitle: 'The Naspen Grove Community Server Blog',
         blogDescription: 'Updates, announcements, and more from the Naspen Grove Community Server.',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'Medical-Blog',
+        path: 'Content/Medical/Blog',
+        routeBasePath: '/Medical/Blog',
+        tagsBasePath: '/Tags',
+        showReadingTime: false,
+        blogTitle: 'The Naspen Grove Medical Blog',
+        blogDescription: 'General notes and updates regarding medical topics, written by Natalie.',
       },
     ],
   ],
@@ -107,18 +129,24 @@ const config = {
         title: 'Naspen',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/dark-logo-no-bg.svg',
+          src: 'img/light-logo-no-bg.svg',
+          srcDark: 'img/dark-logo-no-bg.svg',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
-            position: 'left',
             label: 'Wiki',
+            position: 'left',
           },
           {
             to: '/Blog', 
             label: 'Blog', 
+            position: 'left'
+          },
+          {
+            to: '/Medical', 
+            label: 'Medical', 
             position: 'left'
           },
           {
