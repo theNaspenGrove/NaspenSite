@@ -14,6 +14,7 @@ import Row from '../components/Layout/Row';
 import Col from '../components/Layout/Col';
 
 import MDXContent from '@theme/MDXContent';
+import ThemedImg from '../components/ThemedImg/ThemedImg';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -21,7 +22,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
-          <img src="/img/light-logo-no-bg.svg" style={{width: '1em'}}/>{siteConfig.title}
+          <ThemedImg darkSrc="img/light-logo-no-bg.svg" lightSrc="/img/dark-logo-no-bg.svg/" width="1.2em"/>{siteConfig.title}
         </Heading>
         <p className="hero__subtitle"><MessageOfTheMoment/></p>
       </div>

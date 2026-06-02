@@ -32,6 +32,18 @@
   --ifm-background-color: #1c1c1c !important;
 }
 
+img[data-light-mode],
+img[data-dark-mode] {
+  display: none;
+  max-width: 100%;
+  height: auto;
+}
+
+[data-theme='light'] img[data-light-mode],
+[data-theme='dark'] img[data-dark-mode] {
+  display: inline-block;
+}
+
 html{
   background-color: var(--ifm-background-color);
 }

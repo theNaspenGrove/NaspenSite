@@ -10,6 +10,8 @@ import MessageOfTheMoment from '../components/MOTM/MOTM';
 import Card from '../components/Card';
 import CraftingGrid from '../components/CraftingGrid/CraftingGrid';
 import Define, {Definitions} from '../components/Define/Define';
+import ThemedImg from '../components/ThemedImg/ThemedImg';
+import CannedAdmonitions from '../components/CannedAdmonitions/CannedAdmonitions';
 
 export default {
   // Re-use the default mapping
@@ -23,5 +25,7 @@ export default {
   MessageOfTheMoment,
   Card,
   CraftingGrid,
-  Define
+  Define,
+  ThemedImg,
+  CannedAdmonitions
 };
