@@ -41,6 +41,7 @@ export type DetailsProps = {
 	 */
 	summary?: ReactElement | string;
 	tagged?: boolean;
+	important?: boolean;
 } & ComponentProps<'details'>;
 
 /**
@@ -178,7 +179,7 @@ export default function Details({
 				styles.details,
 				isBrowser && styles.isBrowser,
 				props.className,
-				'alert alert--info'
+				props.important && styles.important,
 			)}
 			onMouseDown={(e) => {
 				const target = e.target as HTMLElement;
